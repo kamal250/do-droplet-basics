@@ -5,13 +5,11 @@ Basics to prepare secure droplet for production ready environment
 To help others (beginnners like me) to build secure [digitalocean droplets](https://www.digitalocean.com/products/droplets/) effectively.
 
 ## Useful Notes
-<ul>
-<li>I prefer Ubuntu OS for droplets so you'll find shell commands accordingly.</li>
-<li>I've mentioned several references available on internet which are/were useful to me.</li>
-<li>I've mostly specified `-y` option on installation commands which don't prompt me to confirm</li>
-<li>If you are unsure about any command how to use it, then always execute it with `--help` or `-h`. e.g. `certbot --help`</li>
-<li>Installed services can be found under `/etc/init.d` directory and service can be restarted using `/etc/init.d/sendmail restart`</li>
-</ul>
+1. I prefer Ubuntu OS for droplets so you'll find shell commands accordingly.
+2. I've mentioned several references available on internet which are/were useful to me.
+3. I've mostly specified `-y` option on installation commands which don't prompt me to confirm
+4. If you are unsure about any command how to use it, then always execute it with `--help` or `-h`. e.g. `certbot --help`
+5. Installed services can be found under `/etc/init.d` directory and service can be restarted using `/etc/init.d/sendmail restart`
 
 ## Summary of basics
 | Sr. # | Step                                      |
@@ -133,7 +131,7 @@ apt install php7.2 -y
 I am installing following commonly used extensions
 
 ```bash
-apt php7.2-common php7.2-mbstring php7.2-soap php7.2-gd php7.2-xml php7.2-intl php7.2-mysql php7.2-zip php7.2-curl php7.2-fpm -y
+apt install php7.2-common php7.2-mbstring php7.2-soap php7.2-gd php7.2-xml php7.2-intl php7.2-mysql php7.2-zip php7.2-curl php7.2-fpm -y
 ```
 
 To install php7.2-mcrypt, follow this tutorial from [lukasmestan.com](https://lukasmestan.com/install-mcrypt-extension-in-php7-2/) and below is summary of commands:
@@ -236,11 +234,9 @@ certbot --apache -d example.com -d www.example.com
 ```
 
 Reference URLs
-<ul>
-<li>[Apache](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04)</li>
-<li>[Nginx](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04)</li>
-<li>[LetsDebug](https://letsdebug.net/) - Useful when you have to debug SSL certificate related issues</li>
-</ul>
+1. [Apache](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04)
+2. [Nginx](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04)
+3. [LetsDebug](https://letsdebug.net/) - Useful when you have to debug SSL certificate related issues
 
 Useful commands:
 ```bash
@@ -263,11 +259,9 @@ echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab # permanent swap
 ```
 
 Reference URLs
-<ul>
-<li>[DigitalOcean community](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04) - I like this community</li>
-<li>[StackOverflow community](https://unix.stackexchange.com/a/463776/21770) - I also like this community.</li>
-<li>[Change swap](https://www.digitalocean.com/community/questions/how-to-change-swap-size-on-ubuntu-14-04)</li>
-</ul>
+1. [DigitalOcean community](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04) - I like this community
+2. [StackOverflow community](https://unix.stackexchange.com/a/463776/21770) - I also like this community.
+3. [Change swap](https://www.digitalocean.com/community/questions/how-to-change-swap-size-on-ubuntu-14-04)
 
 ### 8. sFTP (VSFTPD)
 
@@ -292,10 +286,8 @@ Match User kamal
 ```
 
 Reference URLs
-<ul>
-<li>[DigitalOcean community](https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04)</li>
-<li>[SFTP Connection Error Received unexpected end-of-file from SFTP server](https://www.digitalocean.com/community/questions/sftp-connection-error-received-unexpected-end-of-file-from-sftp-server)</li>
-</ul>
+1. [DigitalOcean community](https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04)
+2. [SFTP Connection Error Received unexpected end-of-file from SFTP server](https://www.digitalocean.com/community/questions/sftp-connection-error-received-unexpected-end-of-file-from-sftp-server)
 
 ### 9. SMTP (SendGrid)
 
@@ -338,11 +330,9 @@ Don't forget to restart service - `service sendmail restart` or `/etc/init.d/sen
 Don't forget to create a firewall and add `25, 465, 587` ports to inbound rules.
 
 Reference URLs
-<ul>
-<li>[Nico Amarilla's note](https://kosinix.com/install-sendmail-ubuntu-slow/)</li>
-<li>[sendmail installation hanged](https://askubuntu.com/a/938450/792412)</li>
-<li>[SendGrid](https://sendgrid.com/docs/for-developers/sending-email/sendmail/)</li>
-</ul>
+1. [Nico Amarilla's note](https://kosinix.com/install-sendmail-ubuntu-slow/)
+2. [sendmail installation hanged](https://askubuntu.com/a/938450/792412)
+3. [SendGrid](https://sendgrid.com/docs/for-developers/sending-email/sendmail/)
 
 Useful commands:
 ```bash
@@ -370,9 +360,7 @@ service apache2 restart
 ```
 
 Reference URLs
-<ul>
-<li>[Tom Davis's note](https://techwombat.com/enable-http2-apache-ubuntu-16-04/)</li>
-</ul>
+1. [Tom Davis's note](https://techwombat.com/enable-http2-apache-ubuntu-16-04/)
 
 ### 11. MySQL Optimization
 
@@ -393,9 +381,7 @@ net_write_timeout = 90
 ```
 
 Reference URLs
-<ul>
-<li>[MySQLTuner-perl](https://github.com/major/MySQLTuner-perl)</li>
-</ul>
+1. [MySQLTuner-perl](https://github.com/major/MySQLTuner-perl)
 
 ### 12. PHP-FPM Optimization
 
@@ -440,24 +426,31 @@ List of commands MySQL queries or MySQL specific commands I am using
 
 <ul>
 <li>To get the sizes of databases;</li>
+
 ```bash
 SELECT table_schema "DB Name",
 ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" 
 FROM information_schema.tables 
 GROUP BY table_schema;
 ```
-<li>To get the list of MyISAM engines & convert all of them to InnoDB [This will give ALTER TABLE query list]</li>
+
+<li>To get the list of MyISAM engines & convert all of them to InnoDB (This will give ALTER TABLE query list)</li>
+
 ```bash
 SELECT CONCAT('ALTER TABLE ',TABLE_NAME,' ENGINE=InnoDB;') 
 FROM INFORMATION_SCHEMA.TABLES
 WHERE ENGINE='MyISAM'
 AND table_schema = 'DB Name';
 ```
+
 <li>Add indexing to tables</li>
+
 ```bash
 ALTER TABLE `Table Name` ADD INDEX( `column1`, `column2`);
 ```
+
 <li>To determine size of tables</li>
+
 ```bash
 SELECT table_name AS "Table",
 ROUND(((data_length + index_length) / 1024 / 1024), 2) AS "Size (MB)"
@@ -465,25 +458,35 @@ FROM information_schema.TABLES
 WHERE table_schema = "DB Name"
 ORDER BY (data_length + index_length) DESC;
 ```
+
 <li>To export global variables in a file using `mysql` command</li>
+
 ```bash
 mysql -u root -A -e"SHOW GLOBAL VARIABLES;" > MySQLCurrentSettings.txt
 ```
+
 <li>To check all transactions performed over INNODB table</li>
+
 ```bash
 SHOW ENGINE INNODB STATUS;
 ```
+
 <li>To show engine of all tables from a database</li>
+
 ```bash
 SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES where TABLE_SCHEMA = 'DB Name';
 ```
+
 <li>To drop all tables from database, prepare drop queries</li>
+
 ```bash
 SELECT concat('DROP TABLE IF EXISTS `', table_name, '`;')
 FROM information_schema.tables
 WHERE table_schema = 'DB Name';
 ```
+
 <li>To get foreign key of a table</li>
+
 ```bash
 SELECT TABLE_NAME, COLUMN_NAME, CONSTRAINT_NAME,
 REFERENCED_TABLE_NAME, REFERENCED_COLUMN_NAME
@@ -491,10 +494,13 @@ FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
 WHERE REFERENCED_TABLE_SCHEMA = 'DB Name'
 AND REFERENCED_TABLE_NAME = 'table_name';
 ```
+
 <li>To export SQLDump with procedures using `mysqldump` command</li>
+
 ```bash
 mysqldump -h <localhost> -u <root-username> -p<root-password> <dbname> --routines > /filename.sql
 ```
+
 </ul>
 
 Set authentication on MongoDB
