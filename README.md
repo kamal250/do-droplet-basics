@@ -142,6 +142,8 @@ apt -y install libmcrypt-dev
 pecl install mcrypt-1.0.1
 ```
 
+Note: If you notice message such as `E: Unable to locate package php7.2` then add `ondrej PPA` repository by executing `add-apt-repository -y ppa:ondrej/php`
+
 Useful commands:
 
 ```bash
