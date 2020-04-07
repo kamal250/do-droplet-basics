@@ -454,6 +454,24 @@ journalctl -n 100 --no-pager # To get the last 100 lines from journalctl
 journalctl --unit=apache2 -n 100 --no-pager # To get the last 100 lines from journalctl of apache2 service
 kill $( lsof -i:80 -t ) # To kill all the process running on port 80
 ln -s ../sites-available/nginx-conf . # To create symlink of nginx-conf file from ../sites-available directory to current directory (.)
+
+find /home/directory/ -type d -exec chmod 755 {} \;
+find /home/directory/ -type f -exec chmod 644 {} \;
+or
+chmod -R a=r,a+X,u+w /your/path
+
+#Note:  chmod -R ugo+rwx directory == chmod -R 0777 directory
+
+setfacl -R -m u:www-data:rwx /home/directory/
+
+# To remove files from /root directory if rm -rf not working
+find /root/ -name 'api_data*'| xargs rm
+
+# List files by size in linux with type
+ls --sort=size *.avi
+
+# To replace one keyword with another 
+sed 's#search-string#replace-string#g' old_file.sql > new_file.sql
 ```
 
 List of commands MySQL queries or MySQL specific commands I am using
