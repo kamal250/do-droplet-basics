@@ -553,6 +553,18 @@ AND REFERENCED_TABLE_NAME = 'table_name';
 mysqldump -h <localhost> -u <root-username> -p<root-password> <dbname> --routines > /filename.sql
 ```
 
+<li>To export SQLDump using `mysqldump` command and compress (i.e. .sql.gz)</li>
+
+```bash
+mysqldump -h <localhost> -u <root-username> -p<root-password> <dbname> --routines | gzip -c > /path/to/filename.sql.gz
+```
+
+<li>To import compressed dump (.sql.gz) using `mysql` command</li>
+
+```bash
+zcat /path/to/filename.sql.gz | mysql -h <localhost> -u <root-username> -p<root-password> <dbname>
+```
+
 </ul>
 
 Set authentication on MongoDB
