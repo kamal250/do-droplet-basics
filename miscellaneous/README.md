@@ -32,6 +32,10 @@ sed 's#search-string#replace-string#g' old_file.sql > new_file.sql
 
 # To get memory usage of apache process
 ps -ylC apache2 | awk '{x += $8;y += 1} END {print "Apache Memory Usage (MB): "x/1024; print "Average Proccess Size (MB): "x/((y-1)*1024)}'
+
+# To change extension from PNG to JPG in a directory
+find /directory/to/change -name "*.png" -exec bash -c 'mv "$1" "${1%.png}".jpg' - '{}' \;
+
 ```
 
 List of commands MySQL queries or MySQL specific commands I am using
