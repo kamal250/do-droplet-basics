@@ -111,6 +111,12 @@ WHERE REFERENCED_TABLE_SCHEMA = 'DB Name'
 AND REFERENCED_TABLE_NAME = 'table_name';
 ```
 
+<li>To kill process in Sleep mode or running since more than 300</li>
+
+```bash
+SELECT concat('KILL ',id,';') from information_schema.processlist where Command='Sleep'; or SELECT concat('KILL ',id,';') from information_schema.processlist where Time>'300';
+```
+
 <li>To export SQLDump with procedures using `mysqldump` command</li>
 
 ```bash
