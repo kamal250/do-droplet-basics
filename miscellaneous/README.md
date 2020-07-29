@@ -19,7 +19,13 @@ chmod -R a=r,a+X,u+w /your/path
 
 #Note:  chmod -R ugo+rwx directory == chmod -R 0777 directory
 
-setfacl -R -m u:www-data:rwx /home/directory/
+#Assign group to newly created files under a directory:
+chmod g+s <dir>
+chgrp <group> <dir>
+
+#Assign user to newly created files under a directory:
+setfacl -R -m u:<group>:rwx <dir>
+# e.g. setfacl -R -m u:www-data:rwx /home/directory/
 
 # To remove files from /root directory if rm -rf not working
 find /root/ -name 'api_data*'| xargs rm
