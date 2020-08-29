@@ -6,7 +6,7 @@ slug: /
 ---
 
 ## Why this repository?
-To help others (beginnners like me) to build secure [digitalocean droplets](https://www.digitalocean.com/products/droplets/) effectively.
+To help others (beginners like me) to build secure [digitalocean droplets](https://www.digitalocean.com/products/droplets/) effectively.
 
 ## Useful Notes
 1. I prefer Ubuntu OS for droplets so you'll find shell commands accordingly.

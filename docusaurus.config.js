@@ -94,7 +94,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} do-droplet-basics - Built with Docusaurus and Love with iFlair and ilajna.`,
+      copyright: `Copyright © ${new Date().getFullYear()} do-droplet-basics - Built with Docusaurus and Love for iFlair and ilajna.`,
     },
   },
   presets: [
