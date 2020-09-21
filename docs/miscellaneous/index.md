@@ -145,6 +145,25 @@ do
 done < "$input"
 ```
 
+<li>Shell script to import table wide .sql.gz to database from a directory </li>
+
+```
+#!/bin/bash
+
+PASS="<password>"
+DB="<database>"
+DIR="<path-to-import-where-.sql.gz-file-exists>"
+USER="<db-user>"
+HOST="<db-host>"
+PORT="<db-port>"
+
+find $DIR -name "*.sql.gz" | while read table
+do
+    echo "$table"
+    zcat $table | mysql -h $HOST -u $USER -p$PASS -P $PORT $DB
+done
+```
+
 </ul>
 
 ### 13.2. MongoDB Authentication
