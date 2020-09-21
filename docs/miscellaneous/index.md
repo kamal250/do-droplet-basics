@@ -164,6 +164,21 @@ do
 done
 ```
 
+<li>Shell script to export table names to a text file </li>
+
+```
+#!/bin/bash
+
+PASS="<password>"
+DB="<database>"
+DIR="<path-to-txt-file>"
+USER="<db-user>"
+HOST="<db-host>"
+PORT="<db-port>"
+
+mysql -h $HOST -u $USER -p$PASS $DB -P $PORT -N -e 'show tables' | while read tablename; do  echo "$tablename" >> "${DIR}/test".txt; done
+```
+
 </ul>
 
 ### 13.2. MongoDB Authentication
