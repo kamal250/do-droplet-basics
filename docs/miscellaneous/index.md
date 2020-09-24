@@ -164,6 +164,13 @@ do
 done
 ```
 
+In case during import you'll notice error such as `@@global.gtid_purged can only be set when @@global.gtid_mode = on` (because you have exported database via `mysqldump` from slave replication without using `--set-gtid-purged=OFF`) then you have to use following command in above script to replace `gtid` with blank string:
+
+```
+# Thanks to https://superuser.com/questions/906843/import-mysql-data-failed-with-error-1839/1588132
+zcat $table | perl -pe 's/SET \@\@GLOBAL\.GTID_PURGED=\x27.*?\x27;//gs' | mysql -h $HOST -u $USER -p$PASS -P $PORT $DB
+```
+
 <li>Shell script to export table names to a text file </li>
 
 ```
