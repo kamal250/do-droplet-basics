@@ -86,6 +86,12 @@ AND REFERENCED_TABLE_NAME = 'table_name';
 SELECT concat('KILL ',id,';') from information_schema.processlist where Command='Sleep'; or SELECT concat('KILL ',id,';') from information_schema.processlist where Time>'300';
 ```
 
+<li>To get the list of all procedures</li>
+
+```bash
+SHOW PROCEDURE STATUS;
+```
+
 <li>To export SQLDump with procedures using `mysqldump` command</li>
 
 ```bash
