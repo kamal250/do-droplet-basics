@@ -192,6 +192,21 @@ PORT="<db-port>"
 mysql -h $HOST -u $USER -p$PASS $DB -P $PORT -N -e 'show tables' | while read tablename; do  echo "$tablename" >> "${DIR}/test".txt; done
 ```
 
+<li>To remove `CREATE DEFINER` from PROCEDURE/FUNCTION in SQL file </li>
+
+```
+sed 's/\sDEFINER=`[^`]*`@`[^`]*`//g' -i sqlfilename.sql
+```
+
+<li>To create a user in AWS RDS with master role (note that *.* for all databases)</li>
+
+```
+CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+GRANT
+SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, PROCESS, REFERENCES, INDEX, ALTER, SHOW DATABASES, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER
+ON *.* TO 'username'@'%' WITH GRANT OPTION;
+```
+
 </ul>
 
 ### 13.2. MongoDB Authentication
