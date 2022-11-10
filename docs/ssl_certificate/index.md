@@ -8,9 +8,8 @@ slug: /ssl-certificate-letsencrypt/
 Execute following commands to install letsencrypt on your server
 
 ```bash
-add-apt-repository ppa:certbot/certbot
 apt update
-apt install python-certbot-apache -y # or python-certbot-nginx according to your web server
+apt install python3-certbot-apache -y # or python-certbot-nginx according to your web server
 ```
 
 Then execute following command to get SSL certificates and letsencrypt will take care automatically to configure it properly.
