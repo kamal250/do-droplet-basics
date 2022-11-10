@@ -9,5 +9,5 @@ To help others (beginners like me) to build secure [digitalocean droplets](https
 ## Credits
 - [Docusaurus](https://v2.docusaurus.io/)
 - [Netlify](https://www.netlify.com/)
-- Love for [iFlair](https://www.iflair.com/) and [ilajna](http://ilajna.co/)
+- Love for [ilajna](http://ilajna.live/)
 

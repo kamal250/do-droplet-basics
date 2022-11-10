@@ -31,6 +31,7 @@ To help others (beginners like me) to build secure [digitalocean droplets](https
 | 11.   | [MySQL Optimization](mysql-optimization)                        |
 | 12.   | [PHP-FPM Optimization](php-fpm-optimization)                      |
 | 13.   | [Miscellaneous](miscellaneous)                             |
+| 14.   | [GIT](git)                             |
 
 ## Detailed information on basics
 
