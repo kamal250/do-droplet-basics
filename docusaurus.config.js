@@ -45,15 +45,15 @@ module.exports = {
               label: "4. Firewall, Security & non-default SSH port",
               to: "docs/firewall-security-and-non-default-ssh-port",
             },
+            {
+              label: "5. Server timezone",
+              to: "docs/server-timezone",
+            },
           ],
         },
         {
           title: "Docs",
           items: [
-            {
-              label: "5. Server timezone",
-              to: "docs/server-timezone",
-            },
             {
               label: "6. SSL certificate (LetsEncrypt)",
               to: "docs/ssl-certificate-letsencrypt/",
@@ -66,11 +66,6 @@ module.exports = {
               label: "8. sFTP (VSFTPD)",
               to: "docs/sftp-vsftpd",
             },
-          ],
-        },
-        {
-          title: "Docs",
-          items: [
             {
               label: "9. SMTP (SendGrid)",
               to: "docs/smtp-sendgrid",
@@ -79,6 +74,11 @@ module.exports = {
               label: "10. HTTP2",
               to: "docs/http2/",
             },
+          ],
+        },
+        {
+          title: "Docs",
+          items: [
             {
               label: "11. MySQL Optimization",
               to: "docs/mysql-optimization/",
@@ -94,6 +94,10 @@ module.exports = {
             {
               label: "14. GIT",
               to: "docs/git",
+            },
+            {
+              label: "15. SSH",
+              to: "docs/ssh",
             },
           ],
         },

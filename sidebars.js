@@ -15,5 +15,6 @@ module.exports = {
     "PHP-FPM Optimization": ["php_fpm/php-fpm-optimization-index"],
     Miscellaneous: ["miscellaneous/php-fpm-optimization-index"],
     GIT: ["git/git-index"],
+    SSH: ["ssh/ssh-index"],
   },
 };
