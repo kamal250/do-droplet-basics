@@ -281,4 +281,10 @@ ps -ylC apache2 | awk '{x += $8;y += 1} END {print "Apache Memory Usage (MB): "x
 # To change extension from PNG to JPG in a directory
 find /directory/to/change -name "*.png" -exec bash -c 'mv "$1" "${1%.png}".jpg' - '{}' \;
 
+# To get the list of unit names from journalctl
+systemctl list-unit-files --all
+
+# To get the logs from journalctl of a specific service say for e.g. chrome.service
+journalctl -f | grep --line-buffered -v "chrome"
+
 ```
